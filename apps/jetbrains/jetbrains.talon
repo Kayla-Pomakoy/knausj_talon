@@ -256,4 +256,5 @@ go camel left: user.camel_left()
 go camel right: user.camel_right()
 
 # requires plug-in: black-pycharm
-blacken: user.idea("action BLACKReformatCode")
+# blacken: user.idea("action BLACKReformatCode")
+blacken : key(alt-shift-F)
