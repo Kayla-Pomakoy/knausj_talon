@@ -58,7 +58,7 @@ find (everywhere | all) <user.text> [over]:
     user.idea("action GotoSymbol")
     insert(text)
     key("enter")
-recent: user.idea("action RecentFiles")
+# recent: user.idea("action RecentFiles")
 
 surround [this] with <user.text> [over]:
     idea("action SurroundWith")
