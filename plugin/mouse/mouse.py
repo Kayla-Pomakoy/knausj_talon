@@ -213,6 +213,16 @@ class Actions:
         rect = ui.active_window().rect
         ctrl.mouse_move(rect.left + (rect.width / 2), rect.top + (rect.height / 2))
 
+    def mouse_move_left_center_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 0.25), rect.top + (rect.height / 2))
+
+    def mouse_move_right_center_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 0.75), rect.top + (rect.height / 2))
+
 
 def show_cursor_helper(show):
     """Show/hide the cursor"""
