@@ -211,18 +211,35 @@ class Actions:
     def mouse_move_center_active_window():
         """move the mouse cursor to the center of the currently active window"""
         rect = ui.active_window().rect
-        ctrl.mouse_move(rect.left + (rect.width / 2), rect.top + (rect.height / 2))
+        ctrl.mouse_move(rect.left + (rect.width * 0.5), rect.top + (rect.height * 0.5))
 
     def mouse_move_left_center_active_window():
         """move the mouse cursor to the center of the currently active window"""
         rect = ui.active_window().rect
-        ctrl.mouse_move(rect.left + (rect.width * 0.25), rect.top + (rect.height / 2))
+        ctrl.mouse_move(rect.left + (rect.width * 0.25), rect.top + (rect.height * 0.5))
 
     def mouse_move_right_center_active_window():
         """move the mouse cursor to the center of the currently active window"""
         rect = ui.active_window().rect
-        ctrl.mouse_move(rect.left + (rect.width * 0.75), rect.top + (rect.height / 2))
+        ctrl.mouse_move(rect.left + (rect.width * 0.75), rect.top + (rect.height * 0.5))
 
+    def mouse_move_lower_right_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 0.75), rect.top + (rect.height * 0.75))
+
+    def mouse_move_bottom_right_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 1), rect.top + (rect.height * 1))
+
+    def mouse_move_top_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 0.75), rect.top + (rect.height*1))
+        # top + height * 0 brings me to top of window
+        # top + height * 1 brings me to bottom of window
+        # Y-axis starts in negatives at top of screen, and increases going down.
 
 def show_cursor_helper(show):
     """Show/hide the cursor"""
