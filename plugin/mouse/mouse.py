@@ -233,13 +233,38 @@ class Actions:
         rect = ui.active_window().rect
         ctrl.mouse_move(rect.left + (rect.width * 1), rect.top + (rect.height * 1))
 
-    def mouse_move_top_active_window():
+    def mouse_move_upper_right_active_window():
         """move the mouse cursor to the center of the currently active window"""
         rect = ui.active_window().rect
-        ctrl.mouse_move(rect.left + (rect.width * 0.75), rect.top + (rect.height*1))
-        # top + height * 0 brings me to top of window
-        # top + height * 1 brings me to bottom of window
-        # Y-axis starts in negatives at top of screen, and increases going down.
+        ctrl.mouse_move(rect.left + (rect.width * 0.75), rect.top + (rect.height*0.25))
+
+    def mouse_move_top_right_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 1), rect.top + (rect.height*0))
+##
+    def mouse_move_top_left_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 0), rect.top + (rect.height*0))
+
+    def mouse_move_upper_left_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 0.25), rect.top + (rect.height*0.25))
+    
+    def mouse_move_lower_left_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 0.25), rect.top + (rect.height * 0.75))
+
+    def mouse_move_bottom_left_active_window():
+        """move the mouse cursor to the center of the currently active window"""
+        rect = ui.active_window().rect
+        ctrl.mouse_move(rect.left + (rect.width * 0), rect.top + (rect.height * 1))
+# top + height * 0 brings me to top of window
+# top + height * 1 brings me to bottom of window
+# Y-axis starts in negatives at top of screen, and increases going down.
 
 def show_cursor_helper(show):
     """Show/hide the cursor"""
